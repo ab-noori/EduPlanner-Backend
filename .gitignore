@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+.env
 
 # .gitignore
 node_modules/
