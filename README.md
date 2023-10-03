@@ -1,6 +1,10 @@
-# EduPlanner-Backend
-<!-- TABLE OF CONTENTS -->
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
+> # EduPlanner Backend
+
+| EduPlanner Schema ERD |
+|---------------------------------------|
+|<div align="center" width="auto"><img alt="Finance-Tracker login" src="edu-erd.png"/></div>|
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)

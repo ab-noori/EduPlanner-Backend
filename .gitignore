@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+.env
 
 # .gitignore
 node_modules/
@@ -15,6 +16,8 @@ node_modules/
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+
+.env
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
