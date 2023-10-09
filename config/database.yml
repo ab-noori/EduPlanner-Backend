@@ -27,7 +27,7 @@ development:
   username: <%= ENV["DB_USERNAME"]%>
   password: <%= ENV["DB_PASSWORD"]%>
   host: localhost
-  port: 5433
+  port: <%= ENV["DB_PORT"]%>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -65,7 +65,7 @@ test:
   username: <%= ENV["DB_USERNAME"]%>
   password: <%= ENV["DB_PASSWORD"]%>
   host: localhost
-  port: 5433
+  port: <%= ENV["DB_PORT"]%>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
