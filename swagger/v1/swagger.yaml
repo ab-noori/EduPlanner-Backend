@@ -6,10 +6,12 @@ info:
 paths:
   "/api/users":
     get:
-      summary: Get a list of users
+      summary: Fetch all users
+      tags:
+      - Users
       responses:
         '200':
-          description: Successful response
+          description: OK
           content:
             application/json:
               schema:
@@ -18,6 +20,9 @@ paths:
                   "$ref": "#/components/schemas/User"
     post:
       summary: Create a new user
+      tags:
+      - Users
+      parameters: []
       requestBody:
         required: true
         content:
@@ -32,7 +37,7 @@ paths:
               schema:
                 "$ref": "#/components/schemas/User"
         '422':
-          description: Unprocessable Entity
+          description: Invalid data - User not created
           content:
             application/json:
               schema:
@@ -42,10 +47,12 @@ paths:
                     type: string
   "/api/courses":
     get:
-      summary: Get a list of courses
+      summary: Fetch all courses
+      tags:
+      - Courses
       responses:
         '200':
-          description: Successful response
+          description: OK
           content:
             application/json:
               schema:
@@ -54,6 +61,9 @@ paths:
                   "$ref": "#/components/schemas/Course"
     post:
       summary: Create a new course
+      tags:
+      - Courses
+      parameters: []
       requestBody:
         required: true
         content:
@@ -68,7 +78,7 @@ paths:
               schema:
                 "$ref": "#/components/schemas/Course"
         '422':
-          description: Unprocessable Entity
+          description: Invalid data - Course not created
           content:
             application/json:
               schema:
@@ -78,7 +88,9 @@ paths:
                     type: string
   "/api/reservations":
     get:
-      summary: Get a list of reservations
+      summary: Fetch all reservations
+      tags:
+      - Reservations
       parameters:
       - name: user_id
         in: query
@@ -88,7 +100,7 @@ paths:
           type: integer
       responses:
         '200':
-          description: Successful response
+          description: OK
           content:
             application/json:
               schema:
@@ -97,6 +109,9 @@ paths:
                   "$ref": "#/components/schemas/Reservation"
     post:
       summary: Create a new reservation
+      tags:
+      - Reservations
+      parameters: []
       requestBody:
         required: true
         content:
@@ -111,7 +126,7 @@ paths:
               schema:
                 "$ref": "#/components/schemas/Reservation"
         '422':
-          description: Unprocessable Entity
+          description: Invalid data - Reservation not created
           content:
             application/json:
               schema:
@@ -124,13 +139,10 @@ components:
     User:
       type: object
       properties:
-        id:
-          type: integer
-        name:
+        username:
           type: string
       required:
-      - id
-      - name
+      - username
     Course:
       type: object
       properties:
@@ -155,22 +167,26 @@ components:
     Reservation:
       type: object
       properties:
-        user_id:
+        id:
           type: integer
-        course_id:
-          type: integer
-        city:
-          type: string
-        date:
+        start_date:
           type: string
           format: date
+        end_date:
+          type: string
+          format: date
+        city:
+          type: string
+        user_id:
+          type: integer
       required:
-      - user_id
-      - course_id
+      - id
+      - start_date
+      - end_date
       - city
-      - date
+      - user_id
 servers:
 - url: https://{defaultHost}
   variables:
     defaultHost:
-      default: www.example.com
+      default: http://127.0.0.1:3000/api-docs/index.html

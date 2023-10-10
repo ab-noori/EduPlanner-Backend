@@ -7,8 +7,11 @@ ruby '3.1.4'
 gem 'rails', '~> 7.0.8'
 
 group :development, :test do
+  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 3.5'
 end
+
 gem 'rswag'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
@@ -45,11 +48,6 @@ gem 'bootsnap', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
-
-group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'debug', platforms: %i[mri mingw x64_mingw]
-end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
