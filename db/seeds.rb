@@ -18,7 +18,7 @@ user2 = User.create(name: "Jane Smith")
 #     startDate: Date.new(2023, 10, 10) + i.days  # Incrementing start date
 #   )
 # end
-Course.create(name: 'course_1', description:'this is our first course', image: nil, fee: 1200, startDate: "2023-04-04")
+Course.create(name: 'course_1', description:'this is our first course', fee: 1200, startDate: "2023-04-04")
 
 course = Course.first
 
