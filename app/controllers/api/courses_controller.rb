@@ -3,7 +3,7 @@ class Api::CoursesController < ApplicationController
 
   # GET /courses
   def index
-    @courses = Course.all
+    @courses = Course.all.to_json(include: [:image])
 
     render json: @courses
   end
@@ -18,9 +18,9 @@ class Api::CoursesController < ApplicationController
     @course = Course.new(course_params)
 
     if @course.save
-      render json: @course, status: :created, location: @course
+      render json: @course, status: :created, location: api_course_url(@course)
     else
-      render json: @course.errors, status: :unprocessable_entity
+      render json: { errors: @course.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
