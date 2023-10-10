@@ -3,14 +3,25 @@ class Api::CoursesController < ApplicationController
 
   # GET /courses
   def index
-    @courses = Course.all.to_json(include: [:image])
+    @courses_with_images = Course.includes(:image_attachment).map do |course|
+      image_url = course.image.attached? ? url_for(course.image) : nil
+      {
+        id: course.id,
+        name: course.name,
+        description: course.description,
+        fee: course.fee,
+        startDate: course.startDate,
+        image_url:
+      }
+    end
 
-    render json: @courses
+    render json: @courses_with_images, location: api_courses_url
   end
 
   # GET /courses/1
   def show
-    render json: @course
+    @course_with_image = course_with_image
+    render json: @course_with_image
   end
 
   # POST /courses
@@ -42,7 +53,19 @@ class Api::CoursesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_course
-    @course = Course.find(params[:id])
+    @course = Course.includes(:image_attachment).find(params[:id])
+  end
+
+  def course_with_image
+    image_url = @course.image.attached? ? url_for(@course.image) : nil
+    {
+      id: @course.id,
+      name: @course.name,
+      description: @course.description,
+      fee: @course.fee,
+      startDate: @course.startDate,
+      image_url:
+    }
   end
 
   # Only allow a list of trusted parameters through.

@@ -6,7 +6,6 @@ class Course < ApplicationRecord
 
   validates :name, presence: true
   validates :description, presence: true
-  validates :image, presence: true
   validates :fee, presence: true, numericality: { greater_than: 0 }
   validates :startDate, presence: true
 end
