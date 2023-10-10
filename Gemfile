@@ -6,6 +6,11 @@ ruby '3.1.4'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.8'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+end
+gem 'rswag'
+
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Use postgresql as the database for Active Record

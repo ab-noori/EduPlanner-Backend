@@ -4,7 +4,7 @@ class Api::ReservationsController < ApplicationController
   # GET /reservations
   def index
     user_id = params[:user_id]
-    @reservations = Reservation.includes(:course).where(user_id: user_id)
+    @reservations = Reservation.includes(:course).where(user_id:)
 
     render json: @reservations, include: :course
   end
