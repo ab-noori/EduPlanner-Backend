@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   namespace :api do
     resources :reservations, only: [:index, :show, :edit, :update, :create]
     resources :users, only: [:index, :show, :edit, :update, :create, :login] do
