@@ -1,12 +1,28 @@
 class Api::ReservationsController < ApplicationController
   before_action :set_reservation, only: %i[show update destroy]
 
-  # GET /reservations
+  # GET /reservations/user_id
   def index
     user_id = params[:user_id]
-    @reservations = Reservation.includes(:course).where(user_id:)
+    @reservs_with_imgs = Reservation.includes(course: { image_attachment: :blob }).where(user_id:).map do |reservation|
+      {
+        id: reservation.id,
+        user_id: reservation.user_id,
+        course_id: reservation.course_id,
+        city: reservation.city,
+        date: reservation.date,
+        course: {
+          id: reservation.course.id,
+          name: reservation.course.name,
+          description: reservation.course.description,
+          fee: reservation.course.fee,
+          startDate: reservation.course.startDate,
+          image_url: reservation.course.image.attached? ? url_for(reservation.course.image) : nil
+        }
+      }
+    end
 
-    render json: @reservations, include: :course
+    render json: @reservs_with_imgs
   end
 
   # GET /reservations/1
