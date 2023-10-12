@@ -47,6 +47,13 @@ class Api::CoursesController < ApplicationController
   # DELETE /courses/1
   def destroy
     @course.destroy
+
+    # Respond with appropriate status code based on the result of destroy
+    if @course.destroyed?
+      head :no_content
+    else
+      render json: { error: 'Unable to delete course' }, status: :unprocessable_entity
+    end
   end
 
   private
