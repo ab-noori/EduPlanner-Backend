@@ -8,6 +8,6 @@ Rails.application.routes.draw do
         post 'login', to: 'users#login'
       end
     end
-    resources :courses, only: [:index, :show, :edit, :update, :create]
+    resources :courses, only: [:index, :show, :edit, :update, :create, :destroy]
   end
 end
