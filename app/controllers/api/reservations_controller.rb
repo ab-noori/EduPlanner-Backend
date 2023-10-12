@@ -52,7 +52,14 @@ class Api::ReservationsController < ApplicationController
 
   # DELETE /reservations/1
   def destroy
-    @reservation.destroy
+    begin
+      @reservation.destroy
+      render json: { message: 'Reservation deleted successfully' }
+    rescue ActiveRecord::RecordNotFound
+      render json: { error: 'Reservation not found' }, status: :not_found
+    rescue StandardError => e
+      render json: { error: e.message }, status: :unprocessable_entity
+    end
   end
 
   private
