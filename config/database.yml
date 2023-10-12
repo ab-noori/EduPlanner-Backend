@@ -89,6 +89,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: EduPlanner_Backend_production
   username: EduPlanner_Backend
   password: <%= ENV["EDUPLANNER_BACKEND_DATABASE_PASSWORD"] %>
