@@ -9,6 +9,7 @@
 
 - [📖 About the Project](#about-project)
   - [Link To The Frontend](#FrontEnd-link)
+  - [KanBan Board](#kanban-board)
   - [🛠 Built With](#built-with)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
@@ -52,7 +53,16 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-This feature has not yet been implemented!
+[liveDemo](https://edu-planner.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## KanBan Board
+[KanBan Project link](https://github.com/users/ab-noori/projects/12)
+
+[Initial Kanban Board state](https://user-images.githubusercontent.com/125574259/271379687-ac62e9d1-7816-497c-b31c-988240bd3eec.png)
+
+**Our team was comprised of 3 developers @Aimable BANCUNGUYE, @Abdul Ali Noori, @gisa chris**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
