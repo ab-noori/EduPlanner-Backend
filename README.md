@@ -32,7 +32,7 @@
 
 
 ## 🔗 Frontend Link <a name="documentation"></a>
-  > _Our [EduPlanner-Backend-Frontend](https://github.com/ab-noori/EduPlanner-Frontend) code is built using React and Redux and is hosted on a separate repository. The front end handles the user interface and integrates with my backend API to retrieve and display data. To access our backend code, please click [here](https://github.com/ab-noori/EduPlanner-Frontend)._
+  > _Our [EduPlanner-Frontend](https://github.com/ab-noori/EduPlanner-Frontend) code is built using React and Redux and is hosted on a separate repository. The front end handles the user interface and integrates with my backend API to retrieve and display data. To access our backend code, please click [here](https://github.com/ab-noori/EduPlanner-Frontend)._
 
 
 ## 🛠 Built With <a name="built-with"></a>
