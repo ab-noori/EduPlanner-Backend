@@ -28,11 +28,12 @@
 
 # 📖 EduPlanner-Backend <a name="about-project"></a>
 
-**EduPlanner-Backend:** This is the Backend Api for the EduPlanner web application project. A rails based backend solution to storing class and student data from the EduPlanner web application.
+**EduPlanner-Backend:** This is the Backend API for the EduPlanner web application project. A rails-based backend solution to storing class and student data from the EduPlanner web application.
 
-# Front End React app link <a name="FrontEnd-link"></a>
 
-[React Frontend](https://github.com/ab-noori/EduPlanner-Frontend)
+## 🔗 Frontend Link <a name="documentation"></a>
+  > _Our [EduPlanner-Backend-Frontend](https://github.com/ab-noori/EduPlanner-Frontend) code is built using React and Redux and is hosted on a separate repository. The front end handles the user interface and integrates with my backend API to retrieve and display data. To access our backend code, please click [here](https://github.com/ab-noori/EduPlanner-Frontend)._
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
