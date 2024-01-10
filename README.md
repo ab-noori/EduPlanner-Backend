@@ -32,7 +32,7 @@
 
 
 ## 🔗 Frontend Link <a name="documentation"></a>
-  > _Our [EduPlanner-Frontend](https://github.com/ab-noori/EduPlanner-Frontend) code is built using React and Redux and is hosted on a separate repository. The front end handles the user interface and integrates with my backend API to retrieve and display data. To access our backend code, please click [here](https://github.com/ab-noori/EduPlanner-Frontend)._
+  > _Our [EduPlanner-Frontend](https://github.com/ab-noori/EduPlanner-Frontend) code is built using React and Redux and is hosted on a separate repository. The front end handles the user interface and integrates with my backend API to retrieve and display data. To access our frontend code, please click [here](https://github.com/ab-noori/EduPlanner-Frontend)._
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -48,8 +48,8 @@
 ### Key Features <a name="key-features"></a>
 
 - **Store data for the EduPlanner website**
-- **Provide Api endpoints for data Entry**
-- **Provide server side validations**
+- **Provide API endpoints for data Entry**
+- **Provide server-side validations**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -72,9 +72,9 @@
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
-In order to run this project you need:
-  * A basic understanding of Ruby, Rails and Git
-  * A postgresql connection
+To run this project you need:
+  * A basic understanding of Ruby, Rails, and Git
+  * A Postgresql connection
   * Create some data before running to see Greatings
 ### Usage
 1. Install Ruby
