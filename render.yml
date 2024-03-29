@@ -12,7 +12,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: edu_planner_production_database_cubw
+          name: edu_planner_production_database_cybw
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
